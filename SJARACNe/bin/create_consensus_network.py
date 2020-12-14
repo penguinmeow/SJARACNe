@@ -18,7 +18,7 @@ def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
                                      description=head_description)
     parser.add_argument('-a', '--adjmat-dir', metavar='STR', required=True, help='directory with adjacent matrix')
-    parser.add_argument('-p', '--p-value', metavar='STR', required=True, help='P value threshold')
+    parser.add_argument('-p', '--p-value', default = '1e-6', metavar='STR', required=True, help='P value threshold')
     parser.add_argument('-e', '--exp-mat', metavar='STR', required=True, help='expression matrix file')
     parser.add_argument('-o', '--out-dir', metavar='STR', required=True, help='output directory')
     parser.add_argument('-s', '--subnet', metavar='STR', help='file with gene symbols of interest to build a subnet')
